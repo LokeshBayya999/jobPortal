@@ -1,0 +1,111 @@
+@import "tailwindcss";
+
+:root {
+  --ink: #10223F;
+  --ink-soft: #2A3B5C;
+  --paper: #F6F3EC;
+  --paper-raised: #FFFFFF;
+  --marigold: #E4A11B;
+  --marigold-dark: #B87E10;
+  --teal: #2F6E5E;
+  --slate: #4A5165;
+  --line: #DED8C8;
+  --error: #B3261E;
+  --success: #2F7D53;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Fraunces', Georgia, serif;
+  letter-spacing: -0.01em;
+}
+
+::selection {
+  background: var(--marigold);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--marigold-dark);
+  outline-offset: 2px;
+}
+
+.container-page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.btn-primary {
+  background: var(--ink);
+  color: var(--paper);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: 1px solid var(--ink);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-primary:hover {
+  background: var(--marigold-dark);
+  border-color: var(--marigold-dark);
+  color: white;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--ink);
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  border: 1px solid var(--ink);
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-secondary:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
+
+.input-field {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border: 1px solid var(--line);
+  background: var(--paper-raised);
+  color: var(--ink);
+  font-family: 'Inter', sans-serif;
+}
+.input-field:focus {
+  border-color: var(--ink);
+}
+.input-field.has-error {
+  border-color: var(--error);
+}
+
+.field-error {
+  color: var(--error);
+  font-size: 0.82rem;
+  margin-top: 0.3rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
